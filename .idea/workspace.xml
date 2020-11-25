@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6291b04b-e6a7-4f74-b0cc-4e6f089ec705" name="Default Changelist" comment="" />
+    <list default="true" id="6291b04b-e6a7-4f74-b0cc-4e6f089ec705" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Expense.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Expense.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -17,6 +23,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -139,6 +148,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kKpt5uSL91vNQxvhN5tlimKN8g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -155,7 +165,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -172,7 +182,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605459353077</updated>
-      <workItem from="1605459355543" duration="3086000" />
+      <workItem from="1605459355543" duration="3308000" />
+      <workItem from="1606076683874" duration="255000" />
+      <workItem from="1606159908106" duration="11140000" />
     </task>
     <servers />
   </component>
@@ -180,9 +192,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="111" y="-901" key="SettingsEditor" timestamp="1605459389436">
+    <state x="111" y="-901" key="SettingsEditor" timestamp="1606161013465">
       <screen x="-350" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="111" y="-901" key="SettingsEditor/-350.-1080.1920.1080/0.0.1280.744@-350.-1080.1920.1080" timestamp="1605459389436" />
+    <state x="111" y="-901" key="SettingsEditor/-350.-1080.1920.1080/0.0.1280.744@-350.-1080.1920.1080" timestamp="1606161013465" />
+    <state x="305" y="68" width="670" height="676" key="search.everywhere.popup" timestamp="1606076860653">
+      <screen x="0" y="0" width="1280" height="744" />
+    </state>
+    <state x="305" y="68" width="670" height="676" key="search.everywhere.popup/0.0.1280.744@0.0.1280.744" timestamp="1606076860653" />
   </component>
 </project>
