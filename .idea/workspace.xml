@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6291b04b-e6a7-4f74-b0cc-4e6f089ec705" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Expense/ExpenseCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Expense/ExpenseCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Expense/ExpenseList.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Expense/ExpenseList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Expense.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Expense.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/expense/expense-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/expense/expense-create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/expense/expense-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/expense/expense-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/expense/expense-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/expense/expense-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
