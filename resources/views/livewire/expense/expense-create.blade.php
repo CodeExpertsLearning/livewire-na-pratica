@@ -48,7 +48,7 @@
             <p class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Foto Comprovante</label>
 
-                <input type="file" name="amount" wire:model="photo"
+                <input type="file" name="photo" wire:model="photo"
                        class="block appearance-none w-full bg-gray-200 border @error('photo') border-red-500 @else border-gray-200 @enderror  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
 
                 @if($photo)
@@ -56,9 +56,16 @@
                 @endif
 
 
-            @error('photo')
+                @error('photo')
                     <h5 class="text-red-500 text-xs italic">{{$message}}</h5>
                 @enderror
+            </p>
+
+            <p class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Data do Comprovante, pode deixar em branco se o dia for hoje.</label>
+
+                <input type="text" name="expense_date" wire:model="expenseDate"
+                       class="block appearance-none w-full bg-gray-200 border border-gray-200  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
             </p>
 
         </div>

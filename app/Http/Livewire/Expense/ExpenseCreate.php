@@ -14,6 +14,7 @@ class ExpenseCreate extends Component
     public $type;
     public $description;
     public $photo;
+    public $expenseDate;
 
     protected $rules = [
         'amount' => 'required',
@@ -35,7 +36,8 @@ class ExpenseCreate extends Component
             'type'   => $this->type,
             'description' => $this->description,
             'user_id'     => 1,
-            'photo'       => $this->photo
+            'photo'       => $this->photo,
+            'expense_date' => $this->expenseDate
         ]);
 
         session()->flash('message', 'Registro criado com sucesso!');
