@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserPlan extends Model
 {
+    protected $table = 'user_plan';
+
     use HasFactory;
 
-    protected $fillable = ['plan_id', 'reference_transaction'];
+    protected $fillable = ['plan_id', 'reference_transaction', 'status', 'date_subscription'];
 
     public function user()
     {
