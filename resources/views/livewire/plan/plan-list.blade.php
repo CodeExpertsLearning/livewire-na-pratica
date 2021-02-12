@@ -1,10 +1,11 @@
 <div class="max-w-7xl mx-auto py-15 px-4">
     <x-slot name="header">Planos</x-slot>
 
+    @include('includes.message')
+
     <div class="w-full mx-auto text-right mb-4">
         <a href="{{route('plans.create')}}" class="flex-shrink-0 bg-green-500 hover:bg-green-900 border-green-700 hover:border-green-900 text-sm border text-white py-2 px-6 rounded">Criar Plano</a>
     </div>
-
 
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -24,6 +25,9 @@
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Criado Em
+                            </th>
+                            <th>
+                                Ações
                             </th>
                         </tr>
                         </thead>
@@ -48,6 +52,9 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                         {{$plan->created_at->format('d/m/Y H:i:s')}}
                                     </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <button wire:click.prevent="openModal({{$plan->id}})" class="px-6 py-2 border border-blue-900 bg-blue-600 text-white font-bold rounded">Adicionar Feature</button>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -56,4 +63,7 @@
             </div>
         </div>
     </div>
+
+    @include('livewire.plan.includes.modal')
+
 </div>

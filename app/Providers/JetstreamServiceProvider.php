@@ -3,8 +3,16 @@
 namespace App\Providers;
 
 use App\Actions\Jetstream\DeleteUser;
+use App\Http\Middleware\Subscription\CheckUserHasAValidSubscription;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
+
+use Laravel\Fortify\Actions\AttemptToAuthenticate;
+use Laravel\Fortify\Actions\EnsureLoginIsNotThrottled;
+use Laravel\Fortify\Actions\PrepareAuthenticatedSession;
+use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
+use Laravel\Fortify\Fortify;
+use Illuminate\Http\Request;
 
 class JetstreamServiceProvider extends ServiceProvider
 {
@@ -28,6 +36,16 @@ class JetstreamServiceProvider extends ServiceProvider
         $this->configurePermissions();
 
         Jetstream::deleteUsersUsing(DeleteUser::class);
+
+        Fortify::authenticateThrough(function (Request $request) {
+            return array_filter([
+                config('fortify.limiters.login') ? null : EnsureLoginIsNotThrottled::class,
+                RedirectIfTwoFactorAuthenticatable::class,
+                AttemptToAuthenticate::class,
+                PrepareAuthenticatedSession::class,
+                CheckUserHasAValidSubscription::class
+            ]);
+        });
     }
 
     /**

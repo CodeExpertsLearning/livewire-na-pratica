@@ -22,7 +22,7 @@
         </thead>
 
         <tbody>
-        @foreach($expenses as $exp)
+        @forelse($expenses as $exp)
             <tr>
                 <td class="px-4 py-2 border">{{$exp->id}}</td>
                 <td class="px-4 py-2 border">{{$exp->description}}</td>
@@ -39,7 +39,11 @@
                        class="px-4 py-2 border rounded bg-red-500 text-white">Remover</a>
                 </td>
             </tr>
-        @endforeach
+        @empty
+            <tr>
+                <td colspan="5">Nenhum registro encontrado!!!</td>
+            </tr>
+        @endforelse
         </tbody>
     </table>
     <div class="w-full mx-auto mt-10">

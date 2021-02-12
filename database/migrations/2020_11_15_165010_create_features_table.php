@@ -20,7 +20,7 @@ class CreateFeaturesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('type');
-
+//rule <- regras de configuracao para esta feature: amount e view
             $table->timestamps();
         });
     }

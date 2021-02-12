@@ -9,7 +9,12 @@ class Feature extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'type'];
+    protected $fillable = ['name', 'slug', 'type', 'rule'];
+
+    public function getRuleAttribute()
+    {
+        return json_decode($this->attributes['rule'], 2);
+    }
 
     public function plan()
     {

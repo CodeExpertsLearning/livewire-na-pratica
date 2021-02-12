@@ -42,6 +42,8 @@ class CreditCard extends Component
             'reference_transaction' => $makeSubscription['code'],
         ]);
 
+        session()->forget('choosed_plan');
+
         session()->flash('message', 'Plano Aderido com Sucesso');
 
         $this->emit('subscriptionFinished');

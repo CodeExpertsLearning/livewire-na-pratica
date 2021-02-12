@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified', 'check.usersubscription'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
@@ -34,7 +34,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::prefix('expenses')->name('expenses.')->group(function(){
 
         Route::get('/', ExpenseList::class)->name('index');
-        Route::get('/create', ExpenseCreate::class)->name('create');
+
+        Route::get('/create', ExpenseCreate::class)
+             ->middleware('check.amountexpenses')
+             ->name('create');
+
         Route::get('/edit/{expense}', ExpenseEdit::class)->name('edit');
 
         Route::get('/{expense}/photo', function($expense) {
@@ -60,7 +64,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
 });
 
-Route::get('subscription/{plan:slug}', \App\Http\Livewire\Payment\CreditCard::class)->name('plan.subscription')->middleware('auth:sanctum');
+Route::prefix('subscription')->group(function(){
+
+    Route::get('/choosed/{plan}', function($plan) {
+            session()->put('choosed_plan', $plan);
+
+            return redirect()->route('plan.subscription', $plan);
+
+    })->name('choosed.plan');
+
+    Route::get('/{plan:slug}', \App\Http\Livewire\Payment\CreditCard::class)
+         ->name('plan.subscription')
+         ->middleware('auth:sanctum');
+});
+
 
 Route::get('/notification', function() {
 //   $code = '99A43B3E27273A3EE4BF2F91542E7F1A';
@@ -69,3 +86,5 @@ Route::get('/notification', function() {
 
    dd($sub);
 });
+
+Route::get('/clear-session', fn() => session()->flush());
