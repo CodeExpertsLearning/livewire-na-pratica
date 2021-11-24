@@ -23,7 +23,9 @@ class Expense extends Model
 
     public function setAmountAttribute($prop)
     {
-        return $this->attributes['amount'] = $prop * 100;
+        $amount = str_replace(['.', ','], ['', '.'], $prop); //19,90 -> 19.90 | 1.090,99 -> 1090.99
+
+        return $this->attributes['amount'] = $amount * 100; //1990, 109099
     }
 
     public function setExpenseDateAttribute($prop)

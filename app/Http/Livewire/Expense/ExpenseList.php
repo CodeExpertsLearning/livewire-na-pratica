@@ -19,6 +19,10 @@ class ExpenseList extends Component
     public $orderBy = 'DESC';
     public $orderByField = 'created_at';
 
+    public function mount($take = null)
+    {
+        $this->take = $take;
+    }
 
     public function render()
     {

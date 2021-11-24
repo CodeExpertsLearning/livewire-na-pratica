@@ -4,13 +4,14 @@ namespace App\Http\Livewire\Expense;
 
 use App\Models\Expense;
 use App\Traits\Subscription\SubscriptionTrait;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class ExpenseEdit extends Component
 {
-    use WithFileUploads, SubscriptionTrait;
+    use WithFileUploads, SubscriptionTrait, AuthorizesRequests;
 
     public Expense $expense;
     public $categories = [];
@@ -31,7 +32,7 @@ class ExpenseEdit extends Component
     public function mount(/*Expense $expense*/)
     {
         $this->description = $this->expense->description;
-        $this->amount      = $this->expense->amount;
+        $this->amount      = number_format($this->expense->amount, 2, ',', '.');
         $this->type        = $this->expense->type;
         $this->categories  = $this->expense->categoriesArr;
     }
@@ -62,6 +63,8 @@ class ExpenseEdit extends Component
 
     public function render()
     {
+        $this->authorize('check.user.can.edit.expense', $this->expense);
+
         return view('livewire.expense.expense-edit')
             ->with('viewFeatures', $this->loadFeaturesByUserPlan('view'));
     }

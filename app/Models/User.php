@@ -68,4 +68,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserPlan::class);
     }
+
+    public function isAdmin()
+    {
+        return $this->role_id == 'ROLE_ADMIN';
+    }
 }

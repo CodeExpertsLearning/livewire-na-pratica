@@ -19,12 +19,26 @@ class ExpenseCreate extends Component
 //    public $photo;
 //    public $expenseDate;
 
+//    public $count = 0;
+//
+//    public function incrementer($start)
+//    {
+//        if(!$this->count && $start) $this->count = $start;
+//
+//        $this->count++;
+//    }
+
     protected $rules = [
         'expense.amount' => 'required',
         'expense.type'   => 'required',
-        'expense.description' => 'required',
-        'expense.photo'       => 'image|nullable'
+        'expense.description' => 'required|min:30',
+        'expense.photo'       => 'nullable|image'
     ];
+
+    public function updated($propName, $value)
+    {
+        $this->validateOnly($propName);
+    }
 
     public function createExpense()
     {

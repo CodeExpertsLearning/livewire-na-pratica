@@ -38,6 +38,12 @@
             <div class="mt-10 sm:mt-0">
                 @livewire('profile.delete-user-form')
             </div>
+
+            <x-jet-section-border />
+
+            <div class="mt-10 sm:mt-0">
+                @livewire('my-subscription')
+            </div>
         </div>
     </div>
 </x-app-layout>

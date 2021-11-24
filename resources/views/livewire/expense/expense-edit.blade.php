@@ -9,7 +9,7 @@
 
         <div class="flex flex-wrap -mx-3 mb-6">
 
-            <p class="w-full px-3 mb-6 md:mb-0">
+            <p class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Descrição Registro</label>
                 <input type="text" name="description" wire:model="description"
                        class="block appearance-none w-full bg-gray-200 border @error('description') border-red-500 @else border-gray-200 @enderror  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
@@ -20,7 +20,7 @@
             </p>
 
 
-            <p class="w-full px-3 mb-6 md:mb-0">
+            <p class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Valor do Registro</label>
                 <input type="text" name="amount" wire:model="amount"
                        class="block appearance-none w-full bg-gray-200 border @error('amount') border-red-500 @else border-gray-200 @enderror  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
@@ -32,7 +32,7 @@
             </p>
 
 
-            <p class="w-full px-3 mb-6 md:mb-0">
+            <p class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Tipo do Registro</label>
                 <select name="type" id="" wire:model="type" class="block appearance-none w-full bg-gray-200 border @error('type') border-red-500 @else border-gray-200 @enderror  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                     <option value="">Selecione o tipo do registro: Entrada ou Saída...</option>
@@ -45,7 +45,7 @@
             @enderror
             </p>
 
-            <p class="w-full px-3 mb-6 md:mb-0">
+            <p class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Foto Comprovante</label>
 
                 <input type="file" name="amount" wire:model="photo"

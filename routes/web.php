@@ -22,7 +22,9 @@ use \App\Http\Livewire\Plan\{PlanList, PlanCreate};
 use \Illuminate\Support\Facades\{File, Storage};
 
 Route::get('/', function () {
-    return view('welcome');
+    $plans = \App\Models\Plan::all();
+
+    return view('welcome', compact('plans'));
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'check.usersubscription'])->get('/dashboard', function () {
